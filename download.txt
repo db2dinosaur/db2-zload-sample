@@ -1,0 +1,19 @@
+To FTP download the file that we UNLOADed (see unload.jcl), use the following from a command prompt (use your own host name, etc):
+
+ftp s0w1.zpdt.local
+<userid and password when prompted>
+ascii
+get EMP.UNLOAD emp.csv
+quit
+
+To FTP download the same file, but in MODE B (block mode) so that it can be used with the ZLOAD command, use the following:
+
+ftp s0w1.zpdt.local
+<userid and password when prompted>
+ascii
+quote mode b
+get EMP.UNLOAD emp.block.ascii
+quit
+
+
+db2dinosaur - March 2017
